@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>程式設計(一)</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Main Wrapper -->
+    <div class="main" id="top">
+      <div class="p-1 container-fluid">
+        <p class="recipetitle">Recipe 1- 程式語言簡介與軟體安裝</p>
+        <p class="recipecontent">本單元將說明 <a href="#topic1" class="bookmark">程式語言架構與Python簡介</a>、<a href="#topic2" class="bookmark">軟體安裝</a>、<a href="#topic3" class="bookmark">程式檔案建立與執行</a></p>
+      </div>
+
+      <!-- main page -->
+      <div id="topic1">
+        <h3 class="recipetitle">程式語言架構與Python簡介</h3>
+        <p class="recipecontent">
+          程式語言用於開發實作專案，不同的專案，開發者選則符合需求的程式語言來完成專案。大部分的程式語言具相同基本架構如變數、資料類型、運算子、條件、迴圈、函數、物件等，不同的是個別程式撰寫語法或提供的功能多寡而以，這裡所謂的語法是指程式語言撰寫的方式，就像日常語言中文有中文寫法，英文有英文的寫法等。所以學習程式語言應著重於解決思考能力的培養，因為大部分的程式撰寫方式是相同的，課程以Python為開始，除了容易撰寫的特性之外，Python也是後續課程(資料分析、大數據、物聯網與人工智慧應用等)與業界會用到的工具。
+        </p>
+      </div>
+      <div id="topic2">
+        <h3 class="recipetitle">軟體安裝</h3>
+        <p class="recipecontent">
+          Python安裝包含 <em>Python</em>與<em>整合開發環境(IDE-Integreated Development Environment)</em>安裝，市面上有許多Python IDE(PyCharm、Atom、Spyder、VSCode等)，課程將使用微軟開源Visual Studio Code，軟體下載與安裝步驟如下：
+        </p>
+        <h5 class="recipecontent">1. 下載Python</h5>
+        <p class="recipecontent">下載最新版本<a href="https://www.python.org/downloads/" target="_blank">Python 3.11.5</a>，點選下載安裝程式，安裝過程請一直選下一步直到完成。</p>
+        <p>
+          <img src="imgs/recipe1/soft-3.png" width="60%"/>
+        </p>
+        <h5 class="recipecontent">2. 驗證Python是否安裝成功</h5>
+        <p class="recipecontent">請點選鍵盤 視窗符號按鈕 與 <em>X</em> ，開啟命令提示字元視窗並輸入 <em>py -3 --version</em>，如果有顯示安裝Python版本，則表示安裝成功。</p>
+        <p>
+          <img src="imgs/recipe1/soft-5.png" width="60%"/>
+        </p>
+        <h5 class="recipecontent">3. 下載程式編輯軟體</h5>
+        <p  class="recipecontent">
+          請下載<a href="https://code.visualstudio.com/download" target="_blank">Windows版Visual Studio</a>，下載後請執行安裝如下圖。
+        </p>
+        <p class="recipecontent">
+          <img src="imgs/recipe1/soft-1.png" width="60%"/>
+        </p>
+        <h5 class="recipecontent">4. 設定VS Code顯示語言</h5>
+        <p class="recipecontent">VS Code預設顯示語言為英文，如希望將顯示語言設定為中文，請點選左邊<em>延伸模組</em>並在<em>搜尋方塊輸入chinese language</em>後，選擇<em>中文(繁體)</em>並選<em>install</em>進行安裝，圖片顯示已安裝符號，安裝後軟體會要求重啟，重啟後選單命令會改為中文。</p>
+        <p>
+          <img src="imgs/recipe1/soft-2.png" width="60%"/>
+        </p>
+        <h5 class="recipecontent">5. 安裝Python延伸模組</h5>
+        <p class="recipecontent">安裝VS Code Python延伸模組之前，請先確認Python已安裝成功，點選左邊<em>延伸模組</em>並在<em>搜尋方塊輸入python</em>後，選擇安裝Python延伸模組。</p>
+        <p>
+          <img src="imgs/recipe1/soft-4.png" width="60%"/>
+        </p>
+        <h5 class="recipecontent">6. 設定Python直譯器</h5>
+        <p class="recipecontent">
+          選擇 <em>檢視-命令選擇區</em> 後，在命令選擇區輸入 <em>Python: Select Interpreter</em>，選擇 <em>Python:選擇直譯器</em> (如下第一張圖)，之後來選擇自己安裝Python版本(如第二張圖)，這個步驟設定當VS Code要執行Python程式時，設定安裝Python直譯程式的位置。
+        </p>
+        <p>
+          <img src="imgs/recipe1/soft-6.png" width="60%"/><br/><br/>
+          <img src="imgs/recipe1/soft-7.png" width="60%"/>
+        </p>
+      </div>
+      <div id="topic3">
+        <h3 class="recipetitle">程式檔案建立與執行</h3>
+        <h5 class="recipecontent">1. 建立課程程式檔案目錄</h5>
+        <p class="recipecontent">
+          請新增目錄用於放置課程所有Python程式，例如在桌面新增一目錄名稱為 <em>python_workspace</em>
+        </p>
+        <h5 class="recipecontent">2. 建立並測試程式</h5>
+        <p class="recipecontent">
+          開啟VS Code，在選單選擇 <em>檔案-開啟資料夾</em> 並選擇桌面Python程式檔案位置資料夾(例python_workspace)，新增檔案並設定檔案名稱為 <em>class1.py</em>，請注意：Python程式檔副檔名為 <em>py</em>，將下列程式碼複製並貼於 <em>class1.py</em>後執行。
+        </p>
+        <div class="codeblock">
+print('Hello! 資管')
+        </div>
+      </div>
+    </div>
+    <a class="btn btn-primary topbtn" href="#top">最上頁</a>
+    <a class="btn btn-danger backbtn" href="index.html">課程選單</a>
+
+    <!-- bootstrap js -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>  
+    
+  </body>
+</html>
