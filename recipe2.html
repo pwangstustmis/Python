@@ -58,20 +58,21 @@
             資料存入變數時會依照存入資料類型提供不同操作與運算，例如數字用於運算、文字用於非數學運算等，要使用適當的資料類型，設計者必須依照操作對象與目的，選擇最適當的資料類型，Python資料類型包含：文字類型(<em>str</em> )、數字類型(<em>int、float、complex</em> )、布林類型(<em>bool</em> )、順序類型(<em>list、tuple、range</em> )、對應類型(<em>dict</em> )、集合類型(<em>set、frozenset</em>) 、二進制類型(<em>bytes、bytearray、memoryview</em> )，資料類型轉換可透過 <em>資料類型(變數)</em> 來進行轉換，例如 <em>int('123')</em> 會將<em>文字 123</em> 轉為 <em>整數 123</em>，Python語言內建函數 <em>type</em> 可傳回變數資料類型，以下對於各個資料類型進行簡單描述。
         </p>
         <h5 class="recipecontent">文字類型(<em>str</em> )</h5>
-        <p class="recipecontent">文字類型變數會將文字字串置於雙引號或單引號內，請注意 <em>"123"</em> 為<em>文字 123</em> ，不可用於數字計算，如需進行數字計算，則須將 <em>文字資料類型轉為數字資料類型</em>。
+        <p class="recipecontent">文字類型變數會將文字字串置於雙引號或單引號內，請注意 <em>"123"</em> 為<em>文字 123</em> ，不可用於數字計算，如需進行數字計算，則須將 <em>文字資料類型轉為數字資料類型</em>，字串可搭配<em>*</em>用於字串重複，使用方法為<em>'字串值'*數字。</em>。
         </p>
         <div class="codeblock">
 a="123"
 b='456'
 print(type(a))
 print(a,b)
+print(a*5)
         </div>
         <div class="codeblock">
 練習：請設定變數 <mark>school</mark> 值為 <mark>南臺科技大學</mark>，變數 <mark>dept</mark> 值為 <mark>資訊管理系</mark>，請用 <mark>print</mark> 命令印出 <mark>南臺科技大學 資訊管理系</mark>，請注意兩個字中間要有一個空格。
 練習：文字類型不能執行數學運算，但是可以相加嗎?
         </div>
 
-        <h5 class="recipecontent">數字類型(<em>int、float、complex</em> )</h5>
+        <h5 class="recipecontent">數字類型(<em>int、float、complex</em>)</h5>
         <p class="recipecontent">
             數字類型可分為整數(int)、具小數數字(float)、複數(complex)。
         </p>
@@ -79,10 +80,18 @@ print(a,b)
 a=1
 b=2
 c=a+b
+c='1'
+d='2'
+e=int(c)
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(e))
         </div>
         <div class="codeblock">
 練習：請印出 123+456.5 答案
 練習：請印出 123+456.5 整數位相加答案
+練習：邊長為5的正方形，請直接印出該正方形面積，將邊長存於變數<mark>a</mark>，利用變數<mark>a</mark>印出正方形面積
         </div>
 
         <h5 class="recipecontent">布林類型(<em>bool</em> )</h5>
@@ -92,18 +101,23 @@ c=a+b
 
         <h5 class="recipecontent">順序類型(<em>list、tuple、range</em> )</h5>
         <p class="recipecontent">順序類型(<em>list、tuple、range</em> )將一連串順序擺放的資料值儲存於變數中，清單(<em>list</em>)將儲存資料置於方括號(<em>[]</em> )中，每個值以逗號隔開、元素(<em>tuple</em>)將儲存資料置於小括號(<em>()</em>)中，每個值以逗號隔開、範圍(<em>range</em>)則為一整數序列。順序類型可搭配 Python預設函數 <em>len(順序變數)</em> 傳回順序變數項目個數。</p>
-        <p class="recipecontent">清單(<em>list</em>)項目內容可改變，有順序，使用方括號來建立清單，方括號搭配項目參考位置值用於存取清單項目，<em>第一個項目參考位置值為0，清單項目內容值可以不同</em>。</p>
+        <p class="recipecontent">清單(<em>list</em>)項目內容可改變，有順序，使用方括號來建立清單，方括號搭配項目參考位置值用於存取清單項目，<em>第一個項目參考位置值為0，清單項目內容值可以不同</em>。清單也可使用像字串<em>重複</em>的動作來建立既定大小的清單，使用方式為<em>變數=[起始值,]*個數值</em></p>
         <div class="codeblock">
 a=[1,2,3,4,5,'南','臺']
 print(a[0],a[1],a[2]])
 a[0]='科'
 print(a[0],a[1],a[2]])
+
+#宣告10值為0的清單
+b=[0]*10
         </div>
         <div class="codeblock">
 練習：設定清單變數 <mark>x</mark> 值包含5個值 <mark>1,2,3,4,5</mark>，請印出變數 x 第1,3,5 數字和。
+練習：班上有4位學生成績分別為<mark>60、70、80、90</mark>，請使用4個變數儲存成績後，算出平均成績。請利用清單變數 <mark>x</mark>儲存成績並計算平均成績。
+練習：請建立大小為<mark>20</mark>、預設值為<mark>-1</mark>的清單
         </div>
         <p class="recipecontent">
-        <em>元素(tuple)</em> 項目內容於元素建立後不可改變，元素項目有順序，使用小括號建立元素，方括號用於項目參考位置值用於存取項目，第一個項目參考位置值為0，元素項目內容值可以不同，如果元素建立後改變內容會產生錯誤。
+        <em>元素(tuple)</em> 項目內容於元素建立後不可改變，元素項目有順序，使用小括號建立元素，方括號用於項目參考位置值用於存取項目，第一個項目參考位置值為0，元素項目內容值可以不同，如果元素建立後改變內容會產生錯誤。元素也可使用像字串<em>重複</em>的動作來建立既定大小的清單，使用方式為<em>變數=(起始值,)*個數值</em>
         </p>
         <div class="codeblock">
 a=(1,2,3,4,5,'南','臺')
@@ -113,6 +127,7 @@ a[0]='科'
         <div class="codeblock">
 練習：設定元素變數 <mark>x</mark> 值包含5個值 <mark>1,2,3,4,5</mark>，請印出變數 x 第1,3,5 數字和。
 練習：設定元素變數 <mark>x</mark> 值包含5個值 <mark>1,2,3,4,5</mark>，請將第二個數值改為6(思考:怎麼做才會對)。
+練習：請建立大小為<mark>20</mark>、預設值為<mark>-1</mark>的元素
         </div>
         <p class="recipecontent">
             <em>範圍(range)</em>項目為順序整數值，有順序，內容建立後不可改變，使用 <em>range(起始值,結束值,間距值)</em> 函數來產生範圍項目，範圍變數使用方括號搭配項目參考位置值來存取項目。<br/>產生範圍變數時，如果沒有設定起始值，起始值預設為 <em>0</em>，如果沒有設定間距值，間距值預設為 <em>1</em>，產生順序整數值由起始值開始，每次增加或減少間距值，一直到結束值為止，<em>請注意 range 不會包含結束值</em>，起始值、結束值、間距值均為整數。
@@ -127,9 +142,72 @@ print(a[0],a[1])
 練習：設定元素變數 x 範圍，包含項目 2,4,6,8,10，並印出各個項目值。
 練習：設定元素變數 x 範圍，包含項目 10,8,6,4,2，並印出各個項目值。
         </div>
+        <h5 class="recipecontent">對應類型(<em>dict</em>)</h5>
+        <p class="recipecontent">
+          對應類型(<em>dict</em>)將資料定義於<em>大括號({}</em>)中，對應項目以<em>項目名稱:項目值</em>表示，使用者可使用對應類型變數搭配方括符來取得項目名稱的值，項目名稱不可重複，項目內容可改變，有順序。
+        </p>
+        <div class="codeblock">
+x={'學號':'12345678','電話':'0911000001','姓名':'王小明'}
+print(x['姓名'])
+        </div>
+        <div class="codeblock">
+  練習：設定對應類型變數 x，包含 id 與 name 兩個項目，值分別為自己 學號與姓名，之後請印出這兩個項目值。
+        </div>
+        <h5 class="recipecontent">集合類型(<em>set、frozenset</em>)</h5>
+        <p class="recipecontent">
+          集合類型(<em>set</em>)將資料定義於大括號({})中，項目資料不可重複，項目內容可增減，沒有順序(資料位置不代表順序)，使用者可以用迴圈搭配運算子<em>in</em>來取得或檢查集合項目。集合類型(frozenset)將可循環資料類型(list、tuple、dict、set)轉換為內容不可增減的集合物件。
+        </p>
+        <div class="codeblock">
+x={'學號':'12345678','電話':'0911000001','姓名':'王小明'}
+print(x['姓名'])
+        </div>
+        <div class="codeblock">
+  練習：設定集合變數 x，包含 資管系、企管系、行流系與財金系，將變數 y 值分別設為 資管系與資工系，請印出變數 y 是否在 集合變數 x 中。
+        </div>        
+      </div>
 
+      <div id="topic3">
+        <h3 class="recipetitle">運算子</h3>
+        <p class="recipecontent">
+          運算子(operator)用於變數與值的運算，常用運算子包含<em>計算、設定、比較、邏輯、隸屬</em>等，接下來每個類別進行介紹。
+        </p>
+        <h5 class="recipecontent">計算運算子(<em>+、-、*、/、%、//</em>)</h5>
+        <p class="recipecontent">計算運算子<em>+、-、*、/、%、//</em> ，除了加、減、乘、除之外，<em>%</em>代表求餘數，<em>//</em>代表整數除法，也就是小數無條件捨去。
+        </p>
+        <div class="codeblock">
+  練習：設定變數<mark>x</mark>值為<mark>1234</mark>，請利用計算運算子分別印出<mark>x的千位值、百位值、十位值與個位值</mark>。同時印出<mark>變數 x 除以5的餘數</mark>。
+        </div>
+
+        <h5 class="recipecontent">設定運算子(<em>=、+=、-=、*=、/=、%=、//=、**=</em>)</h5>
+        <p class="recipecontent">
+          設定運算子<em>=、+=、-=、*=、/=、%=、//=、**=</em> ，用於變數設定表示，以 x+=5為例，他代表 x=x+5 ，而<em>**</em>代表次方數。
+        </p>
+        <div class="codeblock">
+  練習：設定變數<mark>x值為2</mark>，請利用設定運算子分設定<mark>x+2、x-2、x*2、與x/2</mark>後，印出變數<mark>x</mark>值。
+        </div>
+
+        <h5 class="recipecontent">比較運算子(<em>==、!=、&gt;、&gt;=、&lt;、&lt;=</em>)</h5>
+        <p  class="recipecontent">
+          比較運算子<em>==、!=、&gt;、&gt;=、&lt;、&lt;=</em>，用於條件比較分別為 等於、不等於、大於、大於等於、小於、小於等於。
+        </p>
+        <div class="codeblock">
+  練習：設定變數<mark>x值為1234</mark>，如果<mark>變數x為偶數</mark>，印出 <mark>True</mark>，否則印出<mark>False</mark>。
+        </div>
+
+        <h5 class="recipecontent">邏輯運算子(<em>and、or、not</em>)</h5>
+        <p class="recipecontent">邏輯運算子<em>and、or、not</em>，用於串接多個條件比較分別為 且、或、否定。</p>
+        <div class="codeblock">
+  練習：變數<mark>x值為1</mark>，變數<mark>y值為2</mark>，請對下列條件，並印出比較值。<mark>變數 x 值為奇數，變數 y 值為奇數、變數 x 值為奇數，變數 y 值為偶數、變數 x 值為偶數，變數 y 值為奇數、變數 x 值為偶數，變數 y 值為偶數</mark>。
+        </div>
         
-        
+        <h5 class="recipecontent">隸屬運算子(<em>in、not in</em>)</h5>
+        <p class="recipecontent">
+          隸屬運算子<em>in、not in</em>，用於集合資料類型，判斷是否隸屬於該集合。
+        </p>
+        <div class="codeblock">
+  練習：設定集合變數 x，包含 資管系、企管系、行流系與財金系，將變數 y 值分別設為 資工系，請印出變數 y 是否在或不在 集合變數 x 中。
+        </div>
+              
       </div>
 
     </div>
