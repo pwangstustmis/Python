@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>程式設計(一)</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Main Wrapper -->
+    <div class="main" id="top">
+      <div class="p-1 container-fluid">
+        <p class="recipetitle">Recipe 3：輸入/輸出與資料類型操作</p>
+        <p class="recipecontent">本單元將說明 <a href="#topic1" class="bookmark">輸入</a>、<a href="#topic2" class="bookmark">輸出</a>、<a href="#topic3" class="bookmark">文字類型操作</a>、<a href="#topic4" class="bookmark">清單類型操作</a>、<a href="#topic5" class="bookmark">集合類型操作</a></p>
+      </div>
+
+      <!-- main page -->
+      <div id="topic1">
+        <h3 class="recipetitle">輸入</h3>
+        <p class="recipecontent">
+            Python使用 <em>input()或input('提示文字')</em> 方法取得使用者輸入值，直到使用者按下Enter鍵，input()方法傳回
+            文字。
+        </p>
+        <div class="codeblock">
+    x=input()
+    print(int(x)*10)
+    y=int(input('請輸入整數:'))
+    print(y*10)
+        </div>
+        <p class="recipecontent">
+            <em>請注意：input()方法傳回值一定是文字，如需執行數字或其他運算，一定要進行類型轉換</em>。
+        </p>
+        <div class="codeblock">
+    練習：請利用<mark>input()</mark>方法分別輸入長方形寬與高，之後印出 <mark>寬值 * 高值 = 長方形面積答案</mark>
+        </div>
+      </div>
+      <div id="topic2">
+        <h3 class="recipetitle">輸出</h3>
+        <p class="recipecontent">
+            Python格式化輸出建議使用 <em>print(f'{變數:輸出格式}')</em> 進行輸出，常用輸出格式設定如下：
+            <ul>
+                <li>
+                    <em>&lt;輸出長度</em>：設定總輸出長度並靠左對齊。
+                </li>
+                <div class="codeblock">
+    print(f'{1:&lt;10}+2=3')
+                </div>
+                <li>
+                    <em>^輸出長度</em>：設定總輸出長度並置中對齊。
+                </li>
+                <div class="codeblock">
+    print(f'{"abc":^10}')
+    print(f'{"abcde":^10}')
+                </div>
+                <li>
+                    <em>&gt;輸出長度</em>：設定總輸出長度並靠右對齊。
+                </li>
+                <div class="codeblock">
+    print(f'{1:&gt;10}+2=3')
+                </div>
+                <li>
+                    <em>輸出長度d</em>：設定總輸出長度整數輸出，可搭配對齊。
+                </li>
+                <div class="codeblock">
+    print(f'{10:&gt;10d}')
+                </div>
+                <li>
+                    <em>#[對齊符號]輸出長度d</em>：設定總輸出長度搭配對齊整數輸出，前面空白會用<em>#</em>取代。
+                </li>
+                <div class="codeblock">
+    print(f'{10:#&gt;10d}')
+                </div>
+                <li>
+                    <em>0[對齊符號]輸出長度d</em>：設定總輸出長度搭配對齊整數輸出，前面空白會用<em>0</em>取代。
+                </li>
+                <div class="codeblock">
+    print(f'{10:0&gt;10d}')
+                </div>
+                <li>
+                    <em>[對齊符號]輸出長度.小數位f</em>：設定總輸出長度搭配對齊具小數輸出。
+                </li>
+                <div class="codeblock">
+    print(f'{10.12:&gt;10.3f}')
+                </div>
+            </ul>
+        </p>      
+      </div>
+
+      <div id="topic3">
+        <h3 class="recipetitle">文字類型操作</h3>
+        <p class="recipecontent">
+        文字在Python以萬國碼(Unicode)方式儲存，儲存方式類似清單，因此可利用字元位置取得字串內容，同時支援<em> in </em>運算，請注意字串長度可利用<em>len</em>函數為 <em>len(字串或字串變數)</em>，文字類型常用操作如下：
+        <ul>
+            <li>
+                <em>切割(slicing)</em>：切割用於取得文字部分內容，切割方式包含<em> [:]、[開始位置:]、[:結束位置]、[開始位置:結束位置]、[開始位置:結束位置:間距值]</em>，分別代表 全部、開始位置之後、從頭到結束位置、開始到結束位置、開始到結束位置有間距。
+            </li>
+            <div class="codeblock">
+    練習：請設定變數 school 值為 南臺科技大學，請利用文字切割印出 南臺科技大學、科技大學、南臺科技、臺科技、南科大。
+            </div>
+            <li>
+                <em>upper()</em>：用於將字串中英文字轉為大寫。
+            </li>
+            <div class="codeblock">
+    print('abc'.upper())
+            </div>
+            <li>
+                <em>lower()</em>：用於將字串中英文字轉為小寫。
+            </li>
+            <div class="codeblock">
+    print('ABC'.lower())
+            </div>
+            <li>
+                <em>strip()</em>：用於將字串中頭尾空白移除。
+            </li>
+            <div class="codeblock">
+    print('  ABC  '.strip())
+            </div>
+            <li>
+                <em>replace(原始字串,新字串,取代次數)</em>：用於將字串中原始字串用新字串取代，如果未設定取代次數，預設為<em>-1</em>，代表全部取代。
+            </li>
+            <div class="codeblock">
+    print('How are you?'.replace('o','k'))
+            </div>
+            <li>
+                <em>split(分割符號,分割次數)</em>：用於將字串中依照分割符號進行分割，分割後將傳回<em>字串清單</em>，分割次數預設為<em>-1</em>，代表全部分割。
+            </li>
+            <div class="codeblock">
+    print('How are you?'.split(' '))
+            </div>
+            <li>
+                <em>isnumeric()</em>：用於判斷是否為數字性文字字串，傳回值為 <em>True或False</em>。
+            </li>
+            <div class="codeblock">
+    print('123'.isnumeric())
+    print('123a'.isnumeric())
+            </div>
+            <li>
+                <em>find(子字串,開始位置,結束位置)</em>：傳回字串中子字串第一次出現位置，開始位置用於設定字串搜尋開始位置，預設為<em>0</em>，結束位置用於設定字串搜尋結束位置，預設為字串長度，如果找不到則傳回值為 <em>-1</em>。
+            </li>
+            <div class="codeblock">
+    print('How are yor?'.find('How'))
+    print('How are yor?'.find('how'))
+            </div>
+        </ul>
+        </p>      
+      </div>
+      <div id="topic4">
+        <h3 class="recipetitle">清單類型操作</h3>
+        <p class="recipecontent">
+        清單類型常用操作如下：
+        <ul>
+            <li>
+                <em>切割(slicing)</em>：切割用於取得部分清單內容，切割方式包含<em> [:]、[開始位置:]、[:結束位置]、[開始位置:結束位置]、[開始位置:結束位置:間距值]</em>，分別代表 全部、開始位置之後、從頭到結束位置、開始到結束位置、開始到結束位置有間距。
+            </li>
+            <div class="codeblock">
+    練習：請設定清單變數 <mark>x</mark> 值為 <mark>[1,2,3,4,5,6]</mark>，請利用切割印出 <mark>[1,2,3,4,5,6]、[3,4,5,6]、[1,2,3,4]、[2,3,4]、[1,3,5]</mark>。
+            </div>
+            <li>
+                <em>append(清單值)</em>：將新清單值新增於清單最後。
+            </li>
+            <div class="codeblock">
+    x=[1,2,3,4,5]
+    x.append(6)
+            </div>
+            <li>
+                <em>insert(位置,清單值)</em>：將新清單值新增於清單特定位置。
+            </li>
+            <div class="codeblock">
+    x=[1,2,3,4,5]
+    x.insert(0,6)
+            </div>
+            <li>
+                <em>刪除清單值</em>：可利用 <em>remove(清單值)、pop()、pop(位置值)、del 清單變數[位置值]、del 清單變數、清單變數.clear()</em> 來刪除資料，分別代表 <em>刪除清單值、刪除最後一個、刪除位置值清單項目、刪除位置值清單項目、移除整個清單變數、刪除清單變數內容(清單變數仍然存在)</em>。
+            </li>
+            <div class="codeblock">
+    練習：請利用<mark>range</mark>建立從<mark>1</mark>到<mark>10</mark>數，並利用<mark>list</mark>進行類別轉換後，練習刪除清單函數。
+            </div>
+            <li>
+                <em>清單排序</em>：可利用 <em>清單變數.sort()、清單變數.sort(reverse=True)</em> 來進行 <em>清單遞增(由小到大)或遞減(由大到小)</em> 排序。
+            </li>
+            <div class="codeblock">
+    x=[5,4,3,2,1]
+    x.sort()
+    print(x)
+    x.sort(reverse=True)
+    print(x)
+            </div>
+            <li>
+                <em>清單複製</em>：Python清單變數設定並不會產生新的請清單變數，<em>請利用清單變數.copy() 來進行清單複製，請不要用 新變數=原始清單變數 的方式進行清單複製</em>，因為這種方式並不會將清單複製到新變數，而是將兩個變數只到相同的清單。
+            </li>
+            <div class="codeblock">
+    x=[1,2,3,4,5]
+    y=x
+    y[0]=100
+    print(x)
+    x=[1,2,3,4,5]
+    z=x.copy()
+    y[0]=100
+    print(x)
+    print(y)
+            </div>
+        </ul>
+        </p>      
+      </div>
+
+    </div>
+    <a class="btn btn-primary topbtn" href="#top">最上頁</a>
+    <a class="btn btn-danger backbtn" href="index.html">課程選單</a>
+
+    <!-- bootstrap js -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>  
+    
+  </body>
+</html>

@@ -74,7 +74,7 @@ print(a*5)
 
         <h5 class="recipecontent">數字類型(<em>int、float、complex</em>)</h5>
         <p class="recipecontent">
-            數字類型可分為整數(int)、具小數數字(float)、複數(complex)。
+          當使用者希望執行數字運算時，資料會儲存成數字類型，數字類型可分為整數(int)、具小數數字(float)、複數(complex)。
         </p>
         <div class="codeblock">
 a=1
@@ -82,7 +82,7 @@ b=2
 c=a+b
 c='1'
 d='2'
-e=int(c)
+e=int(c) #將文字變數c值轉為整數類型
 print(type(a))
 print(type(b))
 print(type(c))
@@ -92,16 +92,27 @@ print(type(e))
 練習：請印出 123+456.5 答案
 練習：請印出 123+456.5 整數位相加答案
 練習：邊長為5的正方形，請直接印出該正方形面積，將邊長存於變數<mark>a</mark>，利用變數<mark>a</mark>印出正方形面積
+練習：變數<mark>a,b,c,d</mark>定義如下
+a='1'
+b='2'
+c='3'
+d='4'
+請使用上述變數產生下列輸出結果(請注意：未使用上述變數不計分)
+印出<mark>1234</mark>
+印出<mark>變數a與變數b的數字和</mark>，答案為<mark>3</mark>
+印出<mark>121212</mark>
+印出<mark>1112222</mark>
         </div>
 
         <h5 class="recipecontent">布林類型(<em>bool</em> )</h5>
         <p  class="recipecontent">
-            布林類型(<em>bool</em> )僅包含兩個值 <em>True</em> 與 <em>False</em> 分別代表對與錯或真與假，一般會搭配 <em>條件</em> 命令使用。
+            布林類型(<em>bool</em> )僅包含兩個值 <em>True</em> 與 <em>False</em> 分別代表對與錯或真與假，一般會搭配 <em>條件</em> 與 <em>布林運算(and、or、not)</em> 命令使用。
         </p>
 
         <h5 class="recipecontent">順序類型(<em>list、tuple、range</em> )</h5>
-        <p class="recipecontent">順序類型(<em>list、tuple、range</em> )將一連串順序擺放的資料值儲存於變數中，清單(<em>list</em>)將儲存資料置於方括號(<em>[]</em> )中，每個值以逗號隔開、元素(<em>tuple</em>)將儲存資料置於小括號(<em>()</em>)中，每個值以逗號隔開、範圍(<em>range</em>)則為一整數序列。順序類型可搭配 Python預設函數 <em>len(順序變數)</em> 傳回順序變數項目個數。</p>
-        <p class="recipecontent">清單(<em>list</em>)項目內容可改變，有順序，使用方括號來建立清單，方括號搭配項目參考位置值用於存取清單項目，<em>第一個項目參考位置值為0，清單項目內容值可以不同</em>。清單也可使用像字串<em>重複</em>的動作來建立既定大小的清單，使用方式為<em>變數=[起始值,]*個數值</em></p>
+        <p class="recipecontent">順序類型(<em>list、tuple、range</em> )將一連串資料順序儲存於變數中，當使用者有多個資料想要儲存，同時想要透過儲存位置來進行資料存取，使用者可以考慮使用順序資料類型。<br/>
+        清單(<em>list</em>)必須將儲存資料置於方括號(<em>[]</em> )中，每個值以逗號隔開、元素(<em>tuple</em>)必須將儲存資料置於小括號(<em>()</em>)中，每個值以逗號隔開、範圍(<em>range</em>)則為一整數序列。順序類型可搭配 Python預設函數 <em>len(順序變數)</em> 傳回順序變數項目個數。<em>順序類型第一個項目從 0 開始</em>，之後依需而下，</p>
+        <p class="recipecontent">清單(<em>list</em>)項目內容可改變，元素(tuple)、範圍(range)項目內容不可改變。使用<em>方括號搭配項目位置</em>來取得資料。清單也可使用像字串<em>重複</em>的動作來建立既定大小的清單，使用方式為<em>變數=[起始值,]*個數值</em></p>
         <div class="codeblock">
 a=[1,2,3,4,5,'南','臺']
 print(a[0],a[1],a[2]])
@@ -117,7 +128,7 @@ b=[0]*10
 練習：請建立大小為<mark>20</mark>、預設值為<mark>-1</mark>的清單
         </div>
         <p class="recipecontent">
-        <em>元素(tuple)</em> 項目內容於元素建立後不可改變，元素項目有順序，使用小括號建立元素，方括號用於項目參考位置值用於存取項目，第一個項目參考位置值為0，元素項目內容值可以不同，如果元素建立後改變內容會產生錯誤。元素也可使用像字串<em>重複</em>的動作來建立既定大小的清單，使用方式為<em>變數=(起始值,)*個數值</em>
+        <em>元素(tuple)</em> 項目內容於元素建立後不可改變，元素項目有順序，使用小括號建立元素，方括號用於項目參考位置值用於存取項目，第一個項目參考位置值為0，元素項目內容值可以不同，元素(tuple)項目內容不可改變，如果元素建立後改變內容會產生錯誤。元素也可使用像字串<em>重複</em>的動作來建立既定大小的清單，使用方式為<em>變數=(起始值,)*個數值</em>
         </p>
         <div class="codeblock">
 a=(1,2,3,4,5,'南','臺')
@@ -144,7 +155,7 @@ print(a[0],a[1])
         </div>
         <h5 class="recipecontent">對應類型(<em>dict</em>)</h5>
         <p class="recipecontent">
-          對應類型(<em>dict</em>)將資料定義於<em>大括號({}</em>)中，對應項目以<em>項目名稱:項目值</em>表示，使用者可使用對應類型變數搭配方括符來取得項目名稱的值，項目名稱不可重複，項目內容可改變，有順序。
+          對應類型(<em>dict</em>)必須將資料定義於<em>大括號({}</em>)中，對應項目以<em>項目名稱:項目值</em>表示，<em>透過對應類型變數搭配方括符來取得項目名稱的值</em>，項目名稱不可重複，項目內容可改變，有順序。
         </p>
         <div class="codeblock">
 x={'學號':'12345678','電話':'0911000001','姓名':'王小明'}
@@ -152,14 +163,18 @@ print(x['姓名'])
         </div>
         <div class="codeblock">
   練習：設定對應類型變數 x，包含 id 與 name 兩個項目，值分別為自己 學號與姓名，之後請印出這兩個項目值。
+  練習：請利用<mamrk>文字變數、清單變數、對應變數、清單搭配對應變數</mamrk>儲存下列資料
+  (學號,id) 123, (姓名,name) 甲
+  (學號,id) 456, (姓名,name) 乙
+  (學號,id) 789, (姓名,name) 丙
         </div>
         <h5 class="recipecontent">集合類型(<em>set、frozenset</em>)</h5>
         <p class="recipecontent">
           集合類型(<em>set</em>)將資料定義於大括號({})中，項目資料不可重複，項目內容可增減，沒有順序(資料位置不代表順序)，使用者可以用迴圈搭配運算子<em>in</em>來取得或檢查集合項目。集合類型(frozenset)將可循環資料類型(list、tuple、dict、set)轉換為內容不可增減的集合物件。
         </p>
         <div class="codeblock">
-x={'學號':'12345678','電話':'0911000001','姓名':'王小明'}
-print(x['姓名'])
+x={'A','B','C'}
+print('B' in x)
         </div>
         <div class="codeblock">
   練習：設定集合變數 x，包含 資管系、企管系、行流系與財金系，將變數 y 值分別設為 資管系與資工系，請印出變數 y 是否在 集合變數 x 中。
