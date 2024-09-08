@@ -22,6 +22,9 @@
         <p class="recipecontent">
           程式語言用於開發實作專案，不同的專案，開發者選則符合需求的程式語言來完成專案。大部分的程式語言具相同基本架構如變數、資料類型、運算子、條件、迴圈、函數、物件等，不同的是個別程式撰寫語法或提供的功能多寡而以，這裡所謂的語法是指程式語言撰寫的方式，就像日常語言中文有中文寫法，英文有英文的寫法等。所以學習程式語言應著重於解決思考能力的培養，因為大部分的程式撰寫方式是相同的，課程以Python為開始，除了容易撰寫的特性之外，Python也是後續課程(資料分析、大數據、物聯網與人工智慧應用等)與業界會用到的工具。
         </p>
+        <p class="recipecontent">
+          程式設計主要的兩個方法為<em>結構化設計</em>與<em>物件導向設計</em>，結構化分析是透過系統方法來理解和定義系統需求。它著重於將系統分解為更小的、可管理的組件並了解資料和程式流程。物件導向設計著重於現實世界的實體及其交互作用來進行系統建模，它著重於物件及其關係的設計。
+        </p>
       </div>
       <div id="topic2">
         <h3 class="recipetitle">軟體安裝</h3>
@@ -29,15 +32,12 @@
           Python安裝包含 <em>Python</em>與<em>整合開發環境(IDE-Integreated Development Environment)</em>安裝，市面上有許多Python IDE(PyCharm、Atom、Spyder、VSCode等)，課程將使用微軟開源Visual Studio Code，軟體下載與安裝步驟如下：
         </p>
         <h5 class="recipecontent">1. 下載Python</h5>
-        <p class="recipecontent">下載最新版本<a href="https://www.python.org/downloads/" target="_blank">Python 3.11.5</a>，點選下載安裝程式，安裝過程請一直選下一步直到完成。</p>
+        <p class="recipecontent">下載最新版本<a href="https://www.python.org/downloads/" target="_blank">Python 3.12.6</a>，點選下載安裝程式，安裝過程請一直選下一步直到完成。</p>
         <p>
           <img src="imgs/recipe1/soft-3.png" width="60%"/>
         </p>
         <h5 class="recipecontent">2. 驗證Python是否安裝成功</h5>
         <p class="recipecontent">請點選鍵盤 視窗符號按鈕 與 <em>X</em> ，開啟命令提示字元視窗並輸入 <em>py -3 --version</em>，如果有顯示安裝Python版本，則表示安裝成功。</p>
-        <p>
-          <img src="imgs/recipe1/soft-5.png" width="60%"/>
-        </p>
         <h5 class="recipecontent">3. 下載程式編輯軟體</h5>
         <p  class="recipecontent">
           請下載<a href="https://code.visualstudio.com/download" target="_blank">Windows版Visual Studio</a>，下載後請執行安裝如下圖。
@@ -73,6 +73,30 @@
         <h5 class="recipecontent">2. 建立並測試程式</h5>
         <p class="recipecontent">
           開啟VS Code，在選單選擇 <em>檔案-開啟資料夾</em> 並選擇桌面Python程式檔案位置資料夾(例python_workspace)，新增檔案並設定檔案名稱為 <em>class1.py</em>，請注意：Python程式檔副檔名為 <em>py</em>，將下列程式碼複製並貼於 <em>class1.py</em>後執行。
+        </p>
+        <div class="codeblock">
+print('Hello! 資管')
+        </div>
+      </div>
+      <div id="topic3">
+        <h3 class="recipetitle">Anaconda</h3>
+        <h5 class="recipecontent">1. 下載Anaconda</h5>
+        <p class="recipecontent">
+          <a href='https://www.anaconda.com/download' target="_blank">Anaconda</a>為Python套件管理程式，下載後執行安裝。
+        </p>
+        <h5 class="recipecontent">2. 執行Anaconda</h5>
+        <p class="recipecontent">
+          開啟Windows應用程式中 Anaconda中的Anaconda Navigator後選擇Jupyter Notebook並點選Launch開啟Jupyter Notebook，Jupyter Notebook執行於瀏覽器並開啟Jupyter Notebook預設根目錄，Jupyter Notebook檔案(副檔名為<em>ipynb</em>)可包含程式碼(如Python)與文件說明文字。
+        </p>
+        <p class="recipecontent">
+          <img src="imgs/recipe1/soft-15.png" width="80%">
+        </p>
+        <h5 class="recipecontent">3. 建立Jupyter檔案</h5>
+        <p class="recipecontent">
+          請點選右邊<em>New-Notebook</em>來建立新的Notebook檔，點選後請在<em>Select Kernel視窗選擇 Python3(ipykernel)</em>後點選Select，選項清單右邊顯示<em>Code</em>代表現在區塊為程式區塊，使用者可將區塊變換為<em>Markdown、Raw</em>，<em>Markdown</em>為文字說明區塊。新增區塊請選擇<em> + </em>，刪除區塊請選擇<em>&#9988;</em>，執行程式請選擇<em>&#9654;</em>。請在程式區塊輸入下列命令後執行
+        </p>
+        <p class="recipecontent">
+          <img src="imgs/recipe1/soft-17.png" width="80%">
         </p>
         <div class="codeblock">
 print('Hello! 資管')
