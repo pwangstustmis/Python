@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>程式設計(一)</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Main Wrapper -->
+    <div class="main" id="top">
+      <div class="p-1 container-fluid">
+        <p class="recipetitle">Recipe 5：程式邏輯- 迴圈</p>
+        <p class="recipecontent">本單元將說明 <a href="#topic1" class="bookmark">for迴圈</a>、<a href="#topic2" class="bookmark">while迴圈</a></p>
+      </div>
+
+      <!-- main page -->
+      <div id="topic1">
+        <h3 class="recipetitle">for迴圈</h3>
+        <p class="recipecontent">
+            迴圈目的是要重複執行某些動作，Python<em> for </em>迴圈用於執行每個順序類型變數內容，執行命令如下。
+        </p>
+        <div class="codeblock">
+    for 變數 in 順序變數:
+        執行命令
+        </div>
+        <p>可搭配<em>break</em>命令跳出迴圈</p>
+        <div class="codeblock">
+    練習 : 請設定字串變數<mark>s='12345678'</mark>，之後利用<em>for</em>迴圈印出每個清單變數<mark>s</mark>
+    練習：請設定清單變數<mark>a=[1,2,3,4,5]</mark>，之後利用<em>for</em>迴圈印出每個清單變數<mark>a</mark>值
+    練習：請設定範圍變數<mark>b=range(1,10)</mark>，之後利用<em>for</em>迴圈印出每個清單變數<mark>b</mark>值
+    練習：請設定範圍變數<mark>c=range(1,10)</mark>，之後利用<em>for</em>迴圈印出每個清單變數<mark>b</mark>奇數值
+    練習：請讓使用者輸入一個數字後，利用<em>for</em>迴圈印出1到輸入數字值
+    練習：請讓使用者輸入兩個逗點隔開數字，利用<em>for</em>迴圈印出1到第一個輸入數字值，當印到第二個數值時結束迴圈
+        </div>
+      </div>
+      <div id="topic2">
+        <h3 class="recipetitle">while迴圈</h3>
+        <p class="recipecontent">
+            <em>while</em>迴圈為條件迴圈，當條件對時執行，使用者也可使用<em>break</em>命令跳出<em>while</em>迴圈。
+        </p>
+        <div class="codeblock">
+    while 條件:
+        執行動作
+        </div>
+        <div class="codeblock">
+          請將<mark>for</mark>迴圈改用<mark>while</mark>迴圈執行
+        </div>    
+      </div>
+
+    </div>
+    <a class="btn btn-primary topbtn" href="#top">最上頁</a>
+    <a class="btn btn-danger backbtn" href="index.html">課程選單</a>
+
+    <!-- bootstrap js -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>  
+    
+  </body>
+</html>

@@ -48,132 +48,45 @@
       </div>
 
       <div id="topic3">
-        <h3 class="recipetitle">文字類型操作</h3>
+        <h3 class="recipetitle">if elif else命令</h3>
         <p class="recipecontent">
-        文字在Python以萬國碼(Unicode)方式儲存，儲存方式類似清單，因此可利用字元位置取得字串內容，同時支援<em> in </em>運算，請注意字串長度可利用<em>len</em>函數為 <em>len(字串或字串變數)</em>，文字類型常用操作如下：
-        <ul>
-            <li>
-                <em>切割(slicing)</em>：切割用於取得文字部分內容，切割方式包含<em> [:]、[開始位置:]、[:結束位置]、[開始位置:結束位置]、[開始位置:結束位置:間距值]</em>，分別代表 全部、開始位置之後、從頭到結束位置、開始到結束位置、開始到結束位置有間距。
-            </li>
-            <div class="codeblock">
-    練習：請設定變數 school 值為 南臺科技大學，請利用文字切割印出 南臺科技大學、科技大學、南臺科技、臺科技、南科大。
-            </div>
-            <li>
-                <em>upper()</em>：用於將字串中英文字轉為大寫。
-            </li>
-            <div class="codeblock">
-    print('abc'.upper())
-            </div>
-            <li>
-                <em>lower()</em>：用於將字串中英文字轉為小寫。
-            </li>
-            <div class="codeblock">
-    print('ABC'.lower())
-            </div>
-            <li>
-                <em>strip()</em>：用於將字串中頭尾空白移除。
-            </li>
-            <div class="codeblock">
-    print('  ABC  '.strip())
-            </div>
-            <li>
-                <em>replace(原始字串,新字串,取代次數)</em>：用於將字串中原始字串用新字串取代，如果未設定取代次數，預設為<em>-1</em>，代表全部取代。
-            </li>
-            <div class="codeblock">
-    print('How are you?'.replace('o','k'))
-            </div>
-            <li>
-                <em>split(分割符號,分割次數)</em>：用於將字串中依照分割符號進行分割，分割後將傳回<em>字串清單</em>，分割次數預設為<em>-1</em>，代表全部分割。
-            </li>
-            <div class="codeblock">
-    print('How are you?'.split(' '))
-            </div>
-            <li>
-                <em>isnumeric()</em>：用於判斷是否為數字性文字字串，傳回值為 <em>True或False</em>。
-            </li>
-            <div class="codeblock">
-    print('123'.isnumeric())
-    print('123a'.isnumeric())
-            </div>
-            <li>
-                <em>find(子字串,開始位置,結束位置)</em>：傳回字串中子字串第一次出現位置，開始位置用於設定字串搜尋開始位置，預設為<em>0</em>，結束位置用於設定字串搜尋結束位置，預設為字串長度，如果找不到則傳回值為 <em>-1</em>。
-            </li>
-            <div class="codeblock">
-    print('How are yor?'.find('How'))
-    print('How are yor?'.find('how'))
-            </div>
-        </ul>
+            當判斷有許多條件時，第一個為<em>if</em>條件，其他條件則依序為<em>elif</em>條件，<em>else</em>用於設定所有條件都不符合時的動作。
         </p>
         <div class="codeblock">
-    練習：輸入一串文字，印出這串文字<mark>最前面兩個字與最後面兩個字合併</mark>，例如輸入<mark>南臺科技大學</mark>，則輸出<mark>南臺科學</mark>
-    練習：輸入一串文字，並反向印出這串文字，例如輸入<mark>南臺科技大學</mark>，則輸出<mark>學大技科臺南</mark>
-    練習：輸入一串文字，將這串文字中與第一個字相同，全部取代成<mark>$</mark>，例如輸入<mark>this is a cat</mark>，則輸出<mark>$his is a ca$</mark>
-    練習：輸入三個文字以逗點隔開，第一個代表原始文字、第二個代表想要被取代文字、第三個代表取代文字，請印出<mark>取代前與取代後答案</mark>，例如輸入<mark>this is a cat. that is a dog.,is,IS</mark>，答案印出
-    this is a cat. that is a dog.
-    this IS a cat. that IS a dog.
-    練習：輸入兩個文字以逗點隔開，第一個代表原始文字、第二個代表想要被移除文字，請印出<mark>取代前與取代後答案</mark>，例如輸入<mark>this is a cat. that is a dog.,is</mark>，答案印出
-    this is a cat. that is a dog.
-    th  a cat. that  a dog.
-    練習：輸入兩個文字以逗點隔開，第一個代表原始文字、第二個代表想要被移除文字位置，請印出<mark>移除前與移除後答案</mark>，例如輸入<mark>this is a cat.,2</mark>，答案為<marl>置，請印出<mark>移除前與移除後答案</mark>，例如輸入<mark>tis is a cat.</mark>
-        </div>    
+    練習：請設定變數 school 值為 南臺科技大學，並利用輸入<mark>input()</mark>函數讀入1到6的輸入值，當輸入值為<mark>1</mark>時印出<em>南</em>、當輸入值為<mark>2</mark>時印出<em>臺</em>，其他值依序印出對應字。
+    練習：請設定變數 school 值為 南臺科技大學，並利用輸入<mark>input()</mark>函數讀入1到6的輸入值，如上題，請使用字串位置特性印出對應字。
+        </div>          
       </div>
       <div id="topic4">
-        <h3 class="recipetitle">清單類型操作</h3>
+        <h3 class="recipetitle">if命令簡單表示</h3>
         <p class="recipecontent">
-        清單類型常用操作如下：
-        <ul>
-            <li>
-                <em>切割(slicing)</em>：切割用於取得部分清單內容，切割方式包含<em> [:]、[開始位置:]、[:結束位置]、[開始位置:結束位置]、[開始位置:結束位置:間距值]</em>，分別代表 全部、開始位置之後、從頭到結束位置、開始到結束位置、開始到結束位置有間距。
-            </li>
-            <div class="codeblock">
-    練習：請設定清單變數 <mark>x</mark> 值為 <mark>[1,2,3,4,5,6]</mark>，請利用切割印出 <mark>[1,2,3,4,5,6]、[3,4,5,6]、[1,2,3,4]、[2,3,4]、[1,3,5]</mark>。
-            </div>
-            <li>
-                <em>append(清單值)</em>：將新清單值新增於清單最後。
-            </li>
-            <div class="codeblock">
-    x=[1,2,3,4,5]
-    x.append(6)
-            </div>
-            <li>
-                <em>insert(位置,清單值)</em>：將新清單值新增於清單特定位置。
-            </li>
-            <div class="codeblock">
-    x=[1,2,3,4,5]
-    x.insert(0,6)
-            </div>
-            <li>
-                <em>刪除清單值</em>：可利用 <em>remove(清單值)、pop()、pop(位置值)、del 清單變數[位置值]、del 清單變數、清單變數.clear()</em> 來刪除資料，分別代表 <em>刪除清單值、刪除最後一個、刪除位置值清單項目、刪除位置值清單項目、移除整個清單變數、刪除清單變數內容(清單變數仍然存在)</em>。
-            </li>
-            <div class="codeblock">
-    練習：請利用<mark>range</mark>建立從<mark>1</mark>到<mark>10</mark>數，並利用<mark>list</mark>進行類別轉換後，練習刪除清單函數。
-            </div>
-            <li>
-                <em>清單排序</em>：可利用 <em>清單變數.sort()、清單變數.sort(reverse=True)</em> 來進行 <em>清單遞增(由小到大)或遞減(由大到小)</em> 排序。
-            </li>
-            <div class="codeblock">
-    x=[5,4,3,2,1]
-    x.sort()
-    print(x)
-    x.sort(reverse=True)
-    print(x)
-            </div>
-            <li>
-                <em>清單複製</em>：Python清單變數設定並不會產生新的請清單變數，<em>請利用清單變數.copy() 來進行清單複製，請不要用 新變數=原始清單變數 的方式進行清單複製</em>，因為這種方式並不會將清單複製到新變數，而是將兩個變數只到相同的清單。
-            </li>
-            <div class="codeblock">
-    x=[1,2,3,4,5]
-    y=x
-    y[0]=100
-    print(x)
-    x=[1,2,3,4,5]
-    z=x.copy()
-    y[0]=100
-    print(x)
-    print(y)
-            </div>
-        </ul>
-        </p>      
+        如果條件僅包含單一執行動作，則可使用下列if命令簡單表示：
+        </p>
+        <div class="codeblock">
+    if 條件: 條件對動作
+
+    a=1
+    if a>0 :print('yes')
+
+    條件對動作 if 條件 else 條件錯動作
+
+    print('yes') if a>3 else print('no')
+        </div>      
+      </div>
+      <div id="topic5">
+        <h3 class="recipetitle">多條件(and、or、not)</h3>
+        <p class="recipecontent">
+        當條件超過<em>1</em>個以上，條件與條件之間必須使用<em>and(且)、or(或)</em>來串連這些條件，<em>not</em>用於設定否定。
+        </p>
+        <div class="codeblock">
+    練習：比較變數<em>a</em>值是否在<em>1</em>到<em>10</em>之間，如果是印出<mark>在1到10之間</mark>，如果不是印出<mark>不在1到10之間</mark>
+
+    a=15
+    if a&gt;=1 and a&lt;=10:
+      print('在1到10之間')
+    else:
+      print('不在1到10之間')
+        </div>      
       </div>
 
     </div>
