@@ -32,12 +32,12 @@
           Python安裝包含 <em>Python</em>與<em>整合開發環境(IDE-Integreated Development Environment)</em>安裝，市面上有許多Python IDE(PyCharm、Atom、Spyder、VSCode等)，課程將使用微軟開源Visual Studio Code，軟體下載與安裝步驟如下：
         </p>
         <h5 class="recipecontent">1. 下載Python</h5>
-        <p class="recipecontent">下載最新版本<a href="https://www.python.org/downloads/" target="_blank">Python 3.12.6</a>，點選下載安裝程式，安裝過程請一直選下一步直到完成。</p>
+        <p class="recipecontent">下載最新版本<a href="https://www.python.org/downloads/windows/" target="_blank">Python for Windows</a>，點選Stable Releases中 Windows Installer(64-bit)版本，開始安裝畫面請確認 勾選 add python.exe to PATH，之後點選 Install Now，之後過程請一直選下一步直到完成(下圖以Python 3.9版為例)。</p>
         <p>
           <img src="imgs/recipe1/soft-3.png" width="60%"/>
         </p>
         <h5 class="recipecontent">2. 驗證Python是否安裝成功</h5>
-        <p class="recipecontent">請點選鍵盤 視窗符號按鈕 與 <em>X</em> ，開啟命令提示字元視窗並輸入 <em>py -3 --version</em>，如果有顯示安裝Python版本，則表示安裝成功。</p>
+        <p class="recipecontent">請點選鍵盤 視窗符號按鈕 與英文字 <em>X</em> ，選擇 終端機 並輸入 <em>py --version</em>，如果有顯示安裝Python版本，則表示安裝成功。</p>
         <h5 class="recipecontent">3. 下載程式編輯軟體</h5>
         <p  class="recipecontent">
           請下載<a href="https://code.visualstudio.com/download" target="_blank">Windows版Visual Studio</a>，下載後請執行安裝如下圖。
@@ -68,39 +68,29 @@
         <h3 class="recipetitle">程式檔案建立與執行</h3>
         <h5 class="recipecontent">1. 建立課程程式檔案目錄</h5>
         <p class="recipecontent">
-          請新增目錄用於放置課程所有Python程式，例如在桌面新增一目錄名稱為 <em>python_workspace</em>
+          請新增目錄用於放置課程所有Python程式，例如在桌面新增一目錄名稱為 <em>python_files</em>
         </p>
         <h5 class="recipecontent">2. 建立並測試程式</h5>
         <p class="recipecontent">
-          開啟VS Code，在選單選擇 <em>檔案-開啟資料夾</em> 並選擇桌面Python程式檔案位置資料夾(例python_workspace)，新增檔案並設定檔案名稱為 <em>class1.py</em>，請注意：Python程式檔副檔名為 <em>py</em>，將下列程式碼複製並貼於 <em>class1.py</em>後執行。
+          開啟VS Code，在選單選擇 <em>檔案-開啟資料夾</em> 並選擇桌面Python程式檔案位置資料夾(例python_files)，新增檔案並設定檔案名稱為 <em>class1.py</em>，請注意：Python程式檔副檔名為 <em>py</em>，將下列程式碼複製並貼於 <em>class1.py</em>後執行。
         </p>
         <div class="codeblock">
 print('Hello! 資管')
         </div>
       </div>
       <div id="topic3">
-        <h3 class="recipetitle">Anaconda</h3>
-        <h5 class="recipecontent">1. 下載Anaconda</h5>
+        <h3 class="recipetitle">建立虛擬開發環境</h3>
+        <h5 class="recipecontent">1. 建立虛擬環境(venv)</h5>
         <p class="recipecontent">
-          <a href='https://www.anaconda.com/download' target="_blank">Anaconda</a>為Python套件管理程式，下載後執行安裝。
+          由於Python套件眾多，套件編譯Python版本不一定為最新版，因此程式設計者往往需為專案設定特殊版本 Python 及相關套件，而透過虛擬環境(venv)建置，可避免不同專案版本的問題。
         </p>
-        <h5 class="recipecontent">2. 執行Anaconda</h5>
+        <h5 class="recipecontent">2. 建立虛擬環境</h5>
         <p class="recipecontent">
-          開啟Windows應用程式中 Anaconda中的Anaconda Navigator後選擇Jupyter Notebook並點選Launch開啟Jupyter Notebook，Jupyter Notebook執行於瀏覽器並開啟Jupyter Notebook預設根目錄，Jupyter Notebook檔案(副檔名為<em>ipynb</em>)可包含程式碼(如Python)與文件說明文字。
-        </p>
-        <p class="recipecontent">
-          <img src="imgs/recipe1/soft-15.png" width="80%">
-        </p>
-        <h5 class="recipecontent">3. 建立Jupyter檔案</h5>
-        <p class="recipecontent">
-          請點選右邊<em>New-Notebook</em>來建立新的Notebook檔，點選後請在<em>Select Kernel視窗選擇 Python3(ipykernel)</em>後點選Select，選項清單右邊顯示<em>Code</em>代表現在區塊為程式區塊，使用者可將區塊變換為<em>Markdown、Raw</em>，<em>Markdown</em>為文字說明區塊。新增區塊請選擇<em> + </em>，刪除區塊請選擇<em>&#9988;</em>，執行程式請選擇<em>&#9654;</em>。請在程式區塊輸入下列命令後執行
+          開啟VS Code，在選單選擇 <em>檔案-開啟資料夾</em> 並選擇桌面Python程式檔案位置資料夾(例python_files)。接下來選擇 檢視-命令選擇區 輸入 Python:，並選擇 快速建立 venv。
         </p>
         <p class="recipecontent">
-          <img src="imgs/recipe1/soft-17.png" width="80%">
+          之後選擇 venv，並選擇對應版本 Python後，選擇環境名稱為 .venv 後按下輸入鍵。
         </p>
-        <div class="codeblock">
-print('Hello! 資管')
-        </div>
       </div>
     </div>
     <a class="btn btn-primary topbtn" href="#top">最上頁</a>
